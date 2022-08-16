@@ -1,0 +1,50 @@
+== 🙏🏻 전국 사업자 연합 커뮤니티 API 문서
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Table of Contents
+:source-highlighter: prettify
+
+Hong Min Jung <alswjd3813@naver.com>
+
+v1.0.0 2022.08.16
+
+* API 문서 개요
+
+ 이 서비스는 전국의 사장님들이 서로 소통할 수 있는 "전국 사업자 연합 커뮤니티" 서비스 입니다.
+
+== MemberController
+=== 모든 회원 조회
+.curl-request
+include::{snippets}/get-members/curl-request.adoc[]
+
+.http-request
+include::{snippets}/get-members/http-request.adoc[]
+
+.request-fields
+include::{snippets}/get-members/request-fields.adoc[]
+
+.http-response
+include::{snippets}/get-members/http-response.adoc[]
+
+.response-fields
+include::{snippets}/get-member/response-fields.adoc[]
+
+=== 회원 조건 조회 (지역, 업종)
+.curl-request
+include::{snipppets}/get-members-if/curl-request.adoc[]
+
+.http-request
+include::{snippets}/get-members-if/http-request.adoc[]
+
+.request-parameters
+include::{snippets}/get-members-if/request-parameters.adoc[]
+
+.http-response
+include::{snippets}/get-members-if/http-response.adoc[]
+
+.response-fields
+include::{snippets}/get-members-if/response-fields.adoc[]
+
+
+
