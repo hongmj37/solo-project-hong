@@ -2,16 +2,16 @@
 ----
 [ {
   "id" : 1,
-  "name" : "김코딩",
-  "company_name" : "프로젝트스테이츠",
+  "name" : "강감찬",
+  "company_name" : "HappyComp",
   "sex" : "m",
   "company_type" : {
-    "companyTypeId" : 5,
-    "type" : "토목"
+    "companyTypeId" : 1,
+    "type" : "정보통신"
   },
   "company_location" : {
     "companyLocationId" : 1,
-    "location" : "서울특별시"
+    "location" : "서울"
   }
 } ]
 ----

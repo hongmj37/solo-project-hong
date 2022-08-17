@@ -2,46 +2,46 @@
 ----
 HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 740
+Content-Length: 742
 
 [ {
   "id" : 1,
-  "name" : "김코딩",
-  "company_name" : "프로젝트스테이츠",
+  "name" : "강감찬",
+  "company_name" : "HappyComp",
   "sex" : "m",
   "company_type" : {
-    "companyTypeId" : 5,
-    "type" : "토목"
+    "companyTypeId" : 1,
+    "type" : "정보통신"
   },
   "company_location" : {
     "companyLocationId" : 1,
-    "location" : "서울특별시"
+    "location" : "서울"
   }
 }, {
   "id" : 2,
-  "name" : "A",
-  "company_name" : "A",
+  "name" : "홍길동",
+  "company_name" : "ABC Company",
   "sex" : "w",
   "company_type" : {
-    "companyTypeId" : 1,
-    "type" : "IT"
+    "companyTypeId" : 2,
+    "type" : "도소매"
   },
   "company_location" : {
-    "companyLocationId" : 1,
-    "location" : "서울특별시"
+    "companyLocationId" : 3,
+    "location" : "부산"
   }
 }, {
   "id" : 3,
-  "name" : "B",
-  "company_name" : "B",
+  "name" : "이길동",
+  "company_name" : "BYC",
   "sex" : "m",
   "company_type" : {
-    "companyTypeId" : 5,
-    "type" : "토목"
+    "companyTypeId" : 4,
+    "type" : "의료"
   },
   "company_location" : {
-    "companyLocationId" : 4,
-    "location" : "충청북도"
+    "companyLocationId" : 2,
+    "location" : "경기"
   }
 } ]
 ----

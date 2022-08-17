@@ -45,7 +45,7 @@ class MemberControllerTest {
     private Gson gson;
 
     @Test
-    @DisplayName("전체 회원 조회")
+    @DisplayName("모든 회원 조회")
     void getMembers() throws Exception {
         // given
         List<Member> members = stub.getMembers();
@@ -83,17 +83,17 @@ class MemberControllerTest {
     }
 
     @Test
-    @DisplayName("지역, 업종에 따른 회원 조회")
+    @DisplayName("특정 회원 조회")
     void getMember() throws Exception {
         // given
-        String location = "서울특별시";
-        String sector = "토목";
+        String location = "서울";
+        String sector = "정보통신";
         List<Member> members = stub.getMembersByLocationAndSector();
         given(memberService.findMembersByQuery(Mockito.anyString(), Mockito.anyString())).willReturn(members);
 
         // when
         ResultActions actions = mockMvc.perform(
-                get("/v1/members/q?location={location}&sector={sector}", location, sector)
+                get("/v1/members/add?location={location}&sector={sector}", location, sector)
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType(MediaType.APPLICATION_JSON)
         );
@@ -106,7 +106,7 @@ class MemberControllerTest {
                         getRequestPreProcessor(),
                         getResponsePreProcessor(),
                         requestParameters(
-                                parameterWithName("location").description("회사 위치"),
+                                parameterWithName("location").description("위치"),
                                 parameterWithName("sector").description("업종")
                         ),
                         responseFields(

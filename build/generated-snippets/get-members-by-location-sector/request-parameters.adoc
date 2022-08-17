@@ -2,7 +2,7 @@
 |Parameter|Description
 
 |`+location+`
-|회사 위치
+|위치
 
 |`+sector+`
 |업종

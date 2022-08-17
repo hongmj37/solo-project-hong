@@ -18,24 +18,24 @@ CREATE TABLE MEMBER (
     COMPANY_TYPE_ID bigint
 );
 
-insert into COMPANY_LOCATION(LOCATION) VALUES('서울특별시');
-insert into COMPANY_LOCATION(LOCATION) VALUES('경기도');
-insert into COMPANY_LOCATION(LOCATION) VALUES('충청남도');
-insert into COMPANY_LOCATION(LOCATION) VALUES('충청북도');
-insert into COMPANY_LOCATION(LOCATION) VALUES('경상남도');
-insert into COMPANY_LOCATION(LOCATION) VALUES('경상북도');
+insert into COMPANY_LOCATION(LOCATION) VALUES('서울');
+insert into COMPANY_LOCATION(LOCATION) VALUES('경기');
+insert into COMPANY_LOCATION(LOCATION) VALUES('부산');
+insert into COMPANY_LOCATION(LOCATION) VALUES('광주');
+insert into COMPANY_LOCATION(LOCATION) VALUES('울산');
 insert into COMPANY_LOCATION(LOCATION) VALUES('강원도');
-insert into COMPANY_LOCATION(LOCATION) VALUES('전라남도');
-insert into COMPANY_LOCATION(LOCATION) VALUES('전라북도');
-insert into COMPANY_LOCATION(LOCATION) VALUES('부산광역시');
-insert into COMPANY_LOCATION(LOCATION) VALUES('울산광역시');
-insert into COMPANY_LOCATION(LOCATION) VALUES('광주광역시');
+insert into COMPANY_LOCATION(LOCATION) VALUES('전라도');
+insert into COMPANY_LOCATION(LOCATION) VALUES('경상도');
+insert into COMPANY_LOCATION(LOCATION) VALUES('제주도');
+insert into COMPANY_LOCATION(LOCATION) VALUES('인천');
 
-insert into COMPANY_TYPE(TYPE) VALUES('IT');
-insert into COMPANY_TYPE(TYPE) VALUES('반도체');
-insert into COMPANY_TYPE(TYPE) VALUES('전기');
-insert into COMPANY_TYPE(TYPE) VALUES('시공');
-insert into COMPANY_TYPE(TYPE) VALUES('토목');
+
+insert into COMPANY_TYPE(TYPE) VALUES('정보통신');
+insert into COMPANY_TYPE(TYPE) VALUES('도소매');
+insert into COMPANY_TYPE(TYPE) VALUES('전자공학');
 insert into COMPANY_TYPE(TYPE) VALUES('의료');
+insert into COMPANY_TYPE(TYPE) VALUES('토목');
+insert into COMPANY_TYPE(TYPE) VALUES('건축');
+insert into COMPANY_TYPE(TYPE) VALUES('광고');
 
-insert into MEMBER(NAME, PASSWORD, SEX, COMPANY_NAME, COMPANY_TYPE_ID, COMPANY_LOCATION_ID) values('김코딩', 's4goodbye!', 'm', '프로젝트스테이츠', 5, 1);
+insert into MEMBER(NAME, PASSWORD, SEX, COMPANY_NAME, COMPANY_TYPE_ID, COMPANY_LOCATION_ID) values('홍길동', 'hh1234', 'w', 'bgmCompany', 1, 1);
