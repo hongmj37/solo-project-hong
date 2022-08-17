@@ -18,7 +18,7 @@ public class stub {
             new Location(7L, Location.Area.부산),
             new Location(8L, Location.Area.울산),
             new Location(9L, Location.Area.광주),
-            new Location(10L, Location.Area.제주),
+            new Location(10L, Location.Area.제주)
     ));
 
     private static List<Type> companyType = new ArrayList<>(List.of(

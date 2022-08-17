@@ -5,7 +5,6 @@ import com.codestates.entity.Member;
 import com.codestates.service.MemberService;
 import com.codestates.soloproject.Data.stub;
 import com.google.gson.Gson;
-import org.h2.store.Data;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +13,21 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.jpa.mapping.JpaMetamodelMappingContext;
 import org.springframework.http.MediaType;
+import org.springframework.restdocs.payload.JsonFieldType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
 import java.awt.*;
 import java.util.List;
 
+import static com.codestates.soloproject.util.ApiDocumentUtils.getRequestPreProcessor;
+import static com.codestates.soloproject.util.ApiDocumentUtils.getResponsePreProcessor;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
+import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
+import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
+import static org.springframework.restdocs.request.RequestDocumentation.requestParameters;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -54,7 +60,25 @@ public class MemberControllerTest {
 
         //then
         actions
-                .andExpect(status())
-
+                .andExpect(status().isOk())
+                .andDo(document(
+                        "get-members",
+                        getRequestPreProcessor(),
+                        getResponsePreProcessor(),
+                        responseFields(
+                                List.of(
+                                        fieldWithPath("[].id").type(JsonFieldType.NUMBER).description("ID"),
+                                        fieldWithPath("[].name").type(JsonFieldType.STRING).description("이름"),
+                                        fieldWithPath("[].sex").type(JsonFieldType.STRING).description("성별"),
+                                        fieldWithPath("[].company_name").type(JsonFieldType.STRING).description("회사명"),
+                                        fieldWithPath("[].company_type").type(JsonFieldType.OBJECT).description("회사 업종"),
+                                        fieldWithPath("[].company_type.companyTypeId").type(JsonFieldType.NUMBER).description("회사 업종 ID"),
+                                        fieldWithPath("[].company_type.type").type(JsonFieldType.STRING).description("회사 업종 유형"),
+                                        fieldWithPath("[].company_location").type(JsonFieldType.OBJECT).description("회사 위치"),
+                                        fieldWithPath("[].company_location.companyLocationId").type(JsonFieldType.NUMBER).description("회사 위치 ID"),
+                                        fieldWithPath("[].company_location.location").type(JsonFieldType.STRING).description("회사 위치 유")
+                                )
+                        )
+                ));
     }
 }
