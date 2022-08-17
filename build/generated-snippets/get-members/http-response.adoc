@@ -1,0 +1,47 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 740
+
+[ {
+  "id" : 1,
+  "name" : "김코딩",
+  "company_name" : "프로젝트스테이츠",
+  "sex" : "m",
+  "company_type" : {
+    "companyTypeId" : 5,
+    "type" : "토목"
+  },
+  "company_location" : {
+    "companyLocationId" : 1,
+    "location" : "서울특별시"
+  }
+}, {
+  "id" : 2,
+  "name" : "A",
+  "company_name" : "A",
+  "sex" : "w",
+  "company_type" : {
+    "companyTypeId" : 1,
+    "type" : "IT"
+  },
+  "company_location" : {
+    "companyLocationId" : 1,
+    "location" : "서울특별시"
+  }
+}, {
+  "id" : 3,
+  "name" : "B",
+  "company_name" : "B",
+  "sex" : "m",
+  "company_type" : {
+    "companyTypeId" : 5,
+    "type" : "토목"
+  },
+  "company_location" : {
+    "companyLocationId" : 4,
+    "location" : "충청북도"
+  }
+} ]
+----

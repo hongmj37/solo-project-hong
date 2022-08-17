@@ -1,0 +1,44 @@
+|===
+|Path|Type|Description
+
+|`+[].id+`
+|`+Number+`
+|회원 식별자
+
+|`+[].name+`
+|`+String+`
+|회원 이름
+
+|`+[].sex+`
+|`+String+`
+|회원 성별
+
+|`+[].company_name+`
+|`+String+`
+|회원 회사명
+
+|`+[].company_type+`
+|`+Object+`
+|회원 회사 업종 데이터
+
+|`+[].company_type.companyTypeId+`
+|`+Number+`
+|회원 회사 업종 식별자
+
+|`+[].company_type.type+`
+|`+String+`
+|회원 회사 업종 종류
+
+|`+[].company_location+`
+|`+Object+`
+|회원 회사 위치 데이터
+
+|`+[].company_location.companyLocationId+`
+|`+Number+`
+|회원 회사 위치 식별자
+
+|`+[].company_location.location+`
+|`+String+`
+|회원 회사 위치
+
+|===

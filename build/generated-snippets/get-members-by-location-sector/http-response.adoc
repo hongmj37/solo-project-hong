@@ -1,0 +1,21 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 271
+
+[ {
+  "id" : 1,
+  "name" : "김코딩",
+  "company_name" : "프로젝트스테이츠",
+  "sex" : "m",
+  "company_type" : {
+    "companyTypeId" : 5,
+    "type" : "토목"
+  },
+  "company_location" : {
+    "companyLocationId" : 1,
+    "location" : "서울특별시"
+  }
+} ]
+----
