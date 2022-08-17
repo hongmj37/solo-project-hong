@@ -1,4 +1,4 @@
-package api.v1;
+package com.codestates.soloproject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -14,37 +14,31 @@ v1.0.0 2022.08.16
  이 서비스는 전국의 사장님들이 서로 소통할 수 있는 "전국 사업자 연합 커뮤니티" 서비스 입니다.
 
 == MemberController
-=== 모든 회원 조회
+==== 전체 회원 조회
 .curl-request
 include::{snippets}/get-members/curl-request.adoc[]
 
 .http-request
 include::{snippets}/get-members/http-request.adoc[]
 
-.request-fields
-include::{snippets}/get-members/request-fields.adoc[]
-
 .http-response
 include::{snippets}/get-members/http-response.adoc[]
 
 .response-fields
-include::{snippets}/get-member/response-fields.adoc[]
+include::{snippets}/get-members/response-fields.adoc[]
 
-=== 회원 조건 조회 (지역, 업종)
+==== 지역, 업종에 따른 회원 조회
 .curl-request
-include::{snipppets}/get-members-if/curl-request.adoc[]
+include::{snippets}/get-members-by-location-type/curl-request.adoc[]
 
 .http-request
-include::{snippets}/get-members-if/http-request.adoc[]
+include::{snippets}/get-members-by-location-type/http-request.adoc[]
 
 .request-parameters
-include::{snippets}/get-members-if/request-parameters.adoc[]
+include::{snippets}/get-members-by-location-type/request-parameters.adoc[]
 
 .http-response
-include::{snippets}/get-members-if/http-response.adoc[]
+include::{snippets}/get-members-by-location-type/http-response.adoc[]
 
 .response-fields
-include::{snippets}/get-members-if/response-fields.adoc[]
-
-
-
+include::{snippets}/get-members-by-location-type/response-fields.adoc[]
